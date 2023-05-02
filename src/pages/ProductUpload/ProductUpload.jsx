@@ -1,5 +1,7 @@
 import React from "react";
 
-export const ProductUpload = () => {
+const ProductUpload = () => {
   return <div>ProductUpload</div>;
 };
+
+export default ProductUpload;

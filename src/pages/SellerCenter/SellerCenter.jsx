@@ -1,5 +1,7 @@
 import React from "react";
 
-export const SellerCenter = () => {
+const SellerCenter = () => {
   return <div>SellerCenter</div>;
 };
+
+export default SellerCenter;
