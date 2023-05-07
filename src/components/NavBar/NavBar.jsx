@@ -11,18 +11,22 @@ import {
   ShoppingImg,
   LoginImg,
   InfoText,
+  LogoImgLink,
 } from "./NavBarStyle";
 
 import Logo from "../../assets/Logo-hodu.svg";
 import ShoppingCart from "../../assets/icon-shopping-cart.svg";
 import IconUser from "../../assets/icon-user.svg";
 import SearchImg from "../../assets/search.svg";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <Header>
       <LogoWrapper>
-        <LogoImg src={Logo} alt="로고 이미지" />
+        <LogoImgLink to="/">
+          <LogoImg src={Logo} alt="로고 이미지" />
+        </LogoImgLink>
 
         <SearchWrapper>
           <Hidden>검색</Hidden>

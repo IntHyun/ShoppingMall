@@ -27,7 +27,7 @@ export const Hidden = styled.legend`
 
 export const SearchInput = styled.input`
   height: 46px;
-  width: 400px;
+  min-width: 400px;
   border-radius: 50px;
   border: 2px solid #21bf48;
   padding-left: 22px;
@@ -36,6 +36,12 @@ export const SearchInput = styled.input`
 export const SearchBtn = styled.button`
   position: absolute;
   right: 15px;
+`;
+
+export const LogoImgLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const LogoImg = styled.img`
