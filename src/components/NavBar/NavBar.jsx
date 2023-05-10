@@ -14,7 +14,7 @@ import {
   LogoImgLink,
 } from "./NavBarStyle";
 
-import Logo from "../../assets/Logo-hodu.svg";
+import Logo from "../Logo/Logo";
 import ShoppingCart from "../../assets/icon-shopping-cart.svg";
 import IconUser from "../../assets/icon-user.svg";
 import SearchImg from "../../assets/search.svg";
@@ -25,7 +25,7 @@ const NavBar = () => {
     <Header>
       <LogoWrapper>
         <LogoImgLink to="/">
-          <LogoImg src={Logo} alt="로고 이미지" />
+          <Logo />
         </LogoImgLink>
 
         <SearchWrapper>
