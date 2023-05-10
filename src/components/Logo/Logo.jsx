@@ -1,5 +1,7 @@
-import React from "react";
+import MainLogo from "../../assets/Logo-hodu.svg";
 
-export const Logo = () => {
-  return <div>Logo</div>;
+const Logo = () => {
+  return <img src={MainLogo} alt="로고 이미지" />;
 };
+
+export default Logo;
