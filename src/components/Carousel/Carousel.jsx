@@ -1,20 +1,20 @@
-import { Wrapper, BtnWrapper, LeftBtn, RightBtn } from "./CarouselStyle";
+import { StyledWrapper, StyledBtnWrapper, StyledLeftBtn, StyledRightBtn } from "./CarouselStyle";
 
 import LeftBtnImg from "../../assets/icon-swiper-1.svg";
 import RightBtnImg from "../../assets/icon-swiper-2.svg";
 
 const Carousel = () => {
   return (
-    <Wrapper>
-      <BtnWrapper>
-        <LeftBtn>
+    <StyledWrapper>
+      <StyledBtnWrapper>
+        <StyledLeftBtn>
           <img src={LeftBtnImg} alt="" />
-        </LeftBtn>
-        <RightBtn>
+        </StyledLeftBtn>
+        <StyledRightBtn>
           <img src={RightBtnImg} alt="" />
-        </RightBtn>
-      </BtnWrapper>
-    </Wrapper>
+        </StyledRightBtn>
+      </StyledBtnWrapper>
+    </StyledWrapper>
   );
 };
 

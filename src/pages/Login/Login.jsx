@@ -1,6 +1,6 @@
 import Logo from "../../components/Logo/Logo";
 
-import { LogoImgLink } from "../../components/NavBar/NavBarStyle";
+import { StyledLogoImgLink } from "../../components/NavBar/NavBarStyle";
 
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -22,9 +22,9 @@ const Login = () => {
   return (
     <div>
       <StyledLoginHeader>
-        <LogoImgLink to="/">
+        <StyledLogoImgLink to="/">
           <Logo />
-        </LogoImgLink>
+        </StyledLogoImgLink>
       </StyledLoginHeader>
 
       <StyledLoginForm>

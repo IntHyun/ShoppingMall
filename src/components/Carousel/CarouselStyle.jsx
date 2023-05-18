@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const StyledWrapper = styled.div`
   background-color: #f2f2f2;
   // height 추후에 수정필요할지도
   height: 400px;
 `;
 
-export const BtnWrapper = styled.div`
+export const StyledBtnWrapper = styled.div`
   display: flex;
   height: inherit;
   justify-content: space-between;
@@ -14,12 +14,12 @@ export const BtnWrapper = styled.div`
   gap: 12px;
 `;
 
-export const LeftBtn = styled.button`
+export const StyledLeftBtn = styled.button`
   height: 100%;
   margin-left: 10px;
 `;
 
-export const RightBtn = styled.button`
+export const StyledRightBtn = styled.button`
   height: 100%;
   margin-right: 10px;
 `;

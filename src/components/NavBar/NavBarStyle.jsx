@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const Header = styled.header`
+export const StyledHeader = styled.header`
   display: flex;
   // 배경색은 후에 바꾸어야함
   background-color: beige;
@@ -9,14 +9,14 @@ export const Header = styled.header`
   height: 90px;
 `;
 
-export const SearchWrapper = styled.fieldset`
+export const StyledSearchWrapper = styled.fieldset`
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-export const Hidden = styled.legend`
+export const StyledHidden = styled.legend`
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -25,7 +25,7 @@ export const Hidden = styled.legend`
   overflow: hidden;
 `;
 
-export const SearchInput = styled.input`
+export const StyledSearchInput = styled.input`
   height: 46px;
   min-width: 400px;
   border-radius: 50px;
@@ -33,27 +33,27 @@ export const SearchInput = styled.input`
   padding-left: 22px;
 `;
 
-export const SearchBtn = styled.button`
+export const StyledSearchBtn = styled.button`
   position: absolute;
   right: 15px;
 `;
 
-export const LogoImgLink = styled(Link)`
+export const StyledLogoImgLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-export const LogoImg = styled.img`
+export const StyledLogoImg = styled.img`
   width: 124px;
 `;
 
-export const LogoWrapper = styled.header`
+export const StyledLogoWrapper = styled.header`
   display: flex;
   gap: 30px;
 `;
 
-export const InfoWrapper = styled.div`
+export const StyledInfoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,16 +68,16 @@ export const StyledLink = styled(Link)`
   flex-direction: column;
 `;
 
-export const ShoppingImg = styled.img`
+export const StyledShoppingImg = styled.img`
   margin-right: 5px;
   width: 30px;
 `;
 
-export const LoginImg = styled.img`
+export const StyledLoginImg = styled.img`
   width: 30px;
 `;
 
-export const InfoText = styled.p`
+export const StyledInfoText = styled.p`
   width: 48px;
   text-align: center;
   font-weight: 400;

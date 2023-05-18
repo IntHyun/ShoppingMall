@@ -1,17 +1,16 @@
 import {
-  Header,
-  SearchWrapper,
-  Hidden,
-  SearchInput,
-  SearchBtn,
-  LogoImg,
-  LogoWrapper,
-  InfoWrapper,
+  StyledHeader,
+  StyledSearchWrapper,
+  StyledHidden,
+  StyledSearchInput,
+  StyledSearchBtn,
+  StyledLogoWrapper,
+  StyledInfoWrapper,
   StyledLink,
-  ShoppingImg,
-  LoginImg,
-  InfoText,
-  LogoImgLink,
+  StyledShoppingImg,
+  StyledLoginImg,
+  StyledInfoText,
+  StyledLogoImgLink,
 } from "./NavBarStyle";
 
 import Logo from "../Logo/Logo";
@@ -22,33 +21,33 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <Header>
-      <LogoWrapper>
-        <LogoImgLink to="/">
+    <StyledHeader>
+      <StyledLogoWrapper>
+        <StyledLogoImgLink to="/">
           <Logo />
-        </LogoImgLink>
+        </StyledLogoImgLink>
 
-        <SearchWrapper>
-          <Hidden>검색</Hidden>
+        <StyledSearchWrapper>
+          <StyledHidden>검색</StyledHidden>
           <label htmlFor="search"></label>
-          <SearchInput type="text" placeholder="상품을 검색해보세요!" />
-          <SearchBtn type="button">
+          <StyledSearchInput type="text" placeholder="상품을 검색해보세요!" />
+          <StyledSearchBtn type="button">
             <img src={SearchImg} alt="" />
-          </SearchBtn>
-        </SearchWrapper>
-      </LogoWrapper>
+          </StyledSearchBtn>
+        </StyledSearchWrapper>
+      </StyledLogoWrapper>
 
-      <InfoWrapper>
+      <StyledInfoWrapper>
         <StyledLink to="/cart">
-          <ShoppingImg src={ShoppingCart} alt="장바구니" />
-          <InfoText>장바구니</InfoText>
+          <StyledShoppingImg src={ShoppingCart} alt="장바구니" />
+          <StyledInfoText>장바구니</StyledInfoText>
         </StyledLink>
         <StyledLink to="/login">
-          <LoginImg src={IconUser} alt="마이페이지" />
-          <InfoText>로그인</InfoText>
+          <StyledLoginImg src={IconUser} alt="마이페이지" />
+          <StyledInfoText>로그인</StyledInfoText>
         </StyledLink>
-      </InfoWrapper>
-    </Header>
+      </StyledInfoWrapper>
+    </StyledHeader>
   );
 };
 
