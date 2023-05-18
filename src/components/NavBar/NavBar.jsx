@@ -1,7 +1,7 @@
 import {
   StyledHeader,
   StyledSearchWrapper,
-  StyledHidden,
+  StyledHiddenLegend,
   StyledSearchInput,
   StyledSearchBtn,
   StyledLogoWrapper,
@@ -28,7 +28,7 @@ const NavBar = () => {
         </StyledLogoImgLink>
 
         <StyledSearchWrapper>
-          <StyledHidden>검색</StyledHidden>
+          <StyledHiddenLegend>검색</StyledHiddenLegend>
           <label htmlFor="search"></label>
           <StyledSearchInput type="text" placeholder="상품을 검색해보세요!" />
           <StyledSearchBtn type="button">

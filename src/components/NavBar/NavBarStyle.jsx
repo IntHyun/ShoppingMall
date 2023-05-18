@@ -16,7 +16,7 @@ export const StyledSearchWrapper = styled.fieldset`
   align-items: center;
 `;
 
-export const StyledHidden = styled.legend`
+export const StyledHiddenLegend = styled.legend`
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
