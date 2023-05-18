@@ -18,15 +18,24 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
+
     *{
         box-sizing: border-box;
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-weight: 400;
     }
+
+    :root {
+      font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    }
+
     input, textarea { 
       -moz-user-select: auto;
       -webkit-user-select: auto;
       -ms-user-select: auto;
       user-select: auto;
     }
+
     input:focus {
       outline: none;
     }
@@ -36,6 +45,10 @@ const GlobalStyles = createGlobalStyle`
       background: none;
       padding: 0;
       cursor: pointer;
+    }
+    
+    input {
+      border: none;
     }
 `;
 
