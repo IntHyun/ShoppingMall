@@ -15,14 +15,14 @@ const GlobalStyles = createGlobalStyle`
   ${reset}
   
     a{
-        text-decoration: none;
-        color: inherit;
+      text-decoration: none;
+      color: inherit;
     }
 
     *{
-        box-sizing: border-box;
-        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-        font-weight: 400;
+      box-sizing: border-box;
+      font-family: inherit;
+      font-weight: 400;
     }
 
     :root {
