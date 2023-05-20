@@ -8,3 +8,10 @@ export const instance = axios.create({
     "Content-Type": "application/json",
   },
 });
+
+export const imgInstance = axios.create({
+  baseURL: BASE_URL,
+  headers: {
+    "Content-Type:": "multipart/formData",
+  },
+});
