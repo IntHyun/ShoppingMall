@@ -18,7 +18,7 @@ import {
   StyledLoginHeader,
 } from "./LoginStyle";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { instance } from "../../api/axios";
 
 const Login = () => {
