@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const StyledLoginWrapper = styled.section`
   width: 550px;
-  height: 352px;
+  height: 100%;
   margin: 0 auto;
   border-left: 1px solid #c4c4c4;
   border-right: 1px solid #c4c4c4;
