@@ -12,7 +12,7 @@ export const StyledLoginWrapper = styled.section`
 `;
 
 export const StyledLoginHeader = styled.header`
-  margin-top: 100px;
+  margin-top: 70px;
   margin-bottom: 70px;
 `;
 
