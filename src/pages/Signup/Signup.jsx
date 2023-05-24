@@ -9,6 +9,7 @@ import {
 } from "../Login/LoginStyle";
 import { StyledHiddenLegend, StyledLogoImgLink } from "../../components/NavBar/NavBarStyle";
 import Logo from "../../components/Logo/Logo";
+import { Footer } from "../../components/Footer/Footer";
 
 import checkImgOn from "../../assets/icon-check-on.svg";
 import checkImgOff from "../../assets/icon-check-off.svg";
@@ -181,35 +182,6 @@ const Signup = () => {
     width: 100%;
   `;
 
-  const StyledSignupFooter = styled.footer`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  `;
-
-  const StyledAgreeWrapperDiv = styled.div`
-    display: flex;
-    margin: 34px 0;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  `;
-
-  const StyledSignupBtn = styled.button`
-    width: 480px;
-    height: 60px;
-    border-radius: 5px;
-    background-color: #c4c4c4;
-    color: #ffffff;
-    margin-bottom: 70px;
-  `;
-
-  const StyledArgreeText = styled.p`
-    font-size: 14px;
-    color: #767676;
-  `;
-
   return (
     <div>
       <StyledLoginHeader>
@@ -298,15 +270,7 @@ const Signup = () => {
         </StyledSignupForm>
       </StyledLoginWrapper>
 
-      <StyledSignupFooter>
-        <StyledAgreeWrapperDiv>
-          <input type="checkbox" />
-          <StyledArgreeText>
-            호두샵의 이용약관 및 개인정보처리방침에 대한 내용을 확인하였고 동의합니다.
-          </StyledArgreeText>
-        </StyledAgreeWrapperDiv>
-        <StyledSignupBtn>가입하기</StyledSignupBtn>
-      </StyledSignupFooter>
+      <Footer />
     </div>
   );
 };
