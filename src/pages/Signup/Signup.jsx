@@ -34,7 +34,7 @@ const Signup = () => {
 
   const StyledSignupForm = styled.form`
     position: relative;
-    padding: 35px;
+    padding: 35px 35px 35px 35px;
   `;
 
   const StyledSigunupIdWrapperDiv = styled.div`
@@ -46,7 +46,8 @@ const Signup = () => {
   const StyledSignupCommonInput = styled.input`
     border: 1px solid #c4c4c4;
     border-radius: 5px;
-    padding: 10px 0 10px 2px;
+    padding: 10px 0px 10px 5px;
+    width: 100%;
   `;
 
   const StyledCheckIdText = styled.p`
@@ -80,11 +81,13 @@ const Signup = () => {
 
   const StyledSignupPHInput = styled(StyledSignupCommonInput)`
     margin: 10px 0 15px 0;
+    flex-basis: content;
+    flex-grow: 1;
   `;
 
   const StyledSignupEmailInput = styled(StyledSignupCommonInput)`
     margin: 10px 0 0 0;
-    width: 220px;
+    /* width: 220px; */
   `;
 
   const StyledSignupCommonLabel = styled.label`
@@ -130,13 +133,13 @@ const Signup = () => {
 
   const StyledPHWrapperDiv = styled.div`
     display: flex;
-    gap: 12px;
+    gap: 16.5px;
   `;
 
   const StyledEmailWrapperDiv = styled.div`
     position: relative;
     display: flex;
-    gap: 11px;
+    gap: 20px;
   `;
 
   const StyledEtcSpan = styled.span`
@@ -146,6 +149,7 @@ const Signup = () => {
 
   const StyledArrowBtnForDiv = styled.div`
     position: relative;
+    display: flex;
   `;
 
   const StyledArrowBtn = styled.button`
@@ -153,7 +157,7 @@ const Signup = () => {
     top: 36%;
     bottom: 50%;
     transform: translate(-50%, -50%);
-    left: 135px;
+    left: 130px;
   `;
 
   const StyledPHListUl = styled.ul`
@@ -161,8 +165,8 @@ const Signup = () => {
     height: 150px;
     overflow-y: scroll;
     top: 57px;
-    width: 151px;
-    border: 1px solid #767676;
+    width: 100%;
+    border: 1px solid #c4c4c4;
     border-radius: 5px;
     background-color: #ffffff;
     z-index: 20;
@@ -175,6 +179,35 @@ const Signup = () => {
 
   const StyledPHSelectBtn = styled.button`
     width: 100%;
+  `;
+
+  const StyledSignupFooter = styled.footer`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  `;
+
+  const StyledAgreeWrapperDiv = styled.div`
+    display: flex;
+    margin: 34px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  `;
+
+  const StyledSignupBtn = styled.button`
+    width: 480px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #c4c4c4;
+    color: #ffffff;
+    margin-bottom: 70px;
+  `;
+
+  const StyledArgreeText = styled.p`
+    font-size: 14px;
+    color: #767676;
   `;
 
   return (
@@ -264,6 +297,16 @@ const Signup = () => {
           </StyledSignupFiledset>
         </StyledSignupForm>
       </StyledLoginWrapper>
+
+      <StyledSignupFooter>
+        <StyledAgreeWrapperDiv>
+          <input type="checkbox" />
+          <StyledArgreeText>
+            호두샵의 이용약관 및 개인정보처리방침에 대한 내용을 확인하였고 동의합니다.
+          </StyledArgreeText>
+        </StyledAgreeWrapperDiv>
+        <StyledSignupBtn>가입하기</StyledSignupBtn>
+      </StyledSignupFooter>
     </div>
   );
 };
