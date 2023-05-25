@@ -5,10 +5,6 @@ export const StyledLoginWrapper = styled.section`
   width: 550px;
   height: 100%;
   margin: 0 auto;
-  border-left: 1px solid #c4c4c4;
-  border-right: 1px solid #c4c4c4;
-  border-bottom: 1px solid #c4c4c4;
-  border-radius: 10px;
 `;
 
 export const StyledLoginHeader = styled.header`
@@ -41,7 +37,11 @@ export const StyledSellerLoginBtn = styled(StlyedBuyerOrSeller)`
 `;
 
 export const StyledLoginForm = styled.form`
-  border-radius: 10px;
+  border-left: 1px solid #c4c4c4;
+  border-right: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   padding: 35px;
 `;
 
