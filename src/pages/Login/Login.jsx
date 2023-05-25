@@ -5,9 +5,6 @@ import { StyledLogoImgLink } from "../../components/NavBar/NavBarStyle";
 import { StyledHiddenLegend } from "../../components/NavBar/NavBarStyle";
 import {
   StyledLoginWrapper,
-  StyledLoginBtnWrapper,
-  StyledBuyerLoginBtn,
-  StyledSellerLoginBtn,
   StyledLoginForm,
   StyledLoginArea,
   StyledUserInput,
@@ -20,6 +17,7 @@ import {
 
 import { useRef, useState } from "react";
 import { instance } from "../../api/axios";
+import LoginOrSignupBtn from "../../components/LoginOrSignupBtn/LoginOrSignupBtn";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -27,11 +25,14 @@ const Login = () => {
   const userId = useRef(null);
   const userPw = useRef(null);
 
+  const [role, setRole] = useState("BUYER");
   const [isWrong, setIsWrong] = useState(true);
   const [loginType, setLoginType] = useState(true);
-  const [buyerClicked, setBuyerClicked] = useState(true);
-  const [sellerClicked, setSellerClicked] = useState(false);
-  const [buyerOrSeller, setBuyerOrSeller] = useState("BUYER");
+
+  const handleRoleChange = (newRole) => {
+    setRole(newRole);
+    console.log(newRole);
+  };
 
   const handleUserLogin = async (e) => {
     e.preventDefault();
@@ -39,7 +40,7 @@ const Login = () => {
     const data = {
       id: userId.current.value,
       pw: userPw.current.value,
-      type: buyerOrSeller,
+      type: role,
     };
 
     try {
@@ -70,18 +71,6 @@ const Login = () => {
     }
   };
 
-  const handleBuyerClick = () => {
-    setBuyerClicked(true);
-    setSellerClicked(false);
-    setBuyerOrSeller("BUYER");
-  };
-
-  const handleSellerClick = () => {
-    setBuyerClicked(false);
-    setSellerClicked(true);
-    setBuyerOrSeller("SELLER");
-  };
-
   return (
     <div>
       <StyledLoginHeader>
@@ -91,14 +80,11 @@ const Login = () => {
       </StyledLoginHeader>
 
       <StyledLoginWrapper>
-        <StyledLoginBtnWrapper>
-          <StyledBuyerLoginBtn clicked={buyerClicked} onClick={handleBuyerClick}>
-            구매회원 로그인
-          </StyledBuyerLoginBtn>
-          <StyledSellerLoginBtn clicked={sellerClicked} onClick={handleSellerClick}>
-            판매회원 로그인
-          </StyledSellerLoginBtn>
-        </StyledLoginBtnWrapper>
+        <LoginOrSignupBtn
+          onRoleChange={handleRoleChange}
+          singupOrLoginBuyer="구매회원 로그인"
+          singupOrLoginSeller="판매회원 로그인"
+        />
 
         <StyledLoginForm onSubmit={handleUserLogin}>
           <StyledLoginArea>
