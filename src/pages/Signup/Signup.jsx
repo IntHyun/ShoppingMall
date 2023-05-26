@@ -1,9 +1,37 @@
 import styled from "styled-components";
+import { useState } from "react";
 import { StyledLoginWrapper, StyledLoginHeader } from "../Login/LoginStyle";
 import { StyledHiddenLegend, StyledLogoImgLink } from "../../components/NavBar/NavBarStyle";
 import Logo from "../../components/Logo/Logo";
 import { Footer } from "../../components/Footer/Footer";
 import LoginOrSignupBtn from "../../components/LoginOrSignupBtn/LoginOrSignupBtn";
+import {
+  StyledSignupForm,
+  StyledSigunupIdWrapperDiv,
+  StyledCheckIdText,
+  StyledCheckPwText,
+  StyledSignupIdInput,
+  StyledSignupPwInput,
+  StyledSignupPwCheckInput,
+  StyledSignupNameCheckInput,
+  StyledSignupPHInput,
+  StyledSignupEmailInput,
+  StyledSignupCommonLabel,
+  StyledSignupIdCheckBtn,
+  StyledSignupFiledset,
+  StyledSignupIdLabel,
+  StyledPwWrapperDiv,
+  StyledCheckImg,
+  StyledCheckImgOff,
+  StyledPHWrapperDiv,
+  StyledEmailWrapperDiv,
+  StyledEtcSpan,
+  StyledArrowBtnForDiv,
+  StyledArrowBtn,
+  StyledPHListUl,
+  StyledPHListLi,
+  StyledPHSelectBtn,
+} from "./SignupStyle";
 
 import checkImgOn from "../../assets/icon-check-on.svg";
 import checkImgOff from "../../assets/icon-check-off.svg";
@@ -11,160 +39,12 @@ import iconUpArrow from "../../assets/icon-up-arrow.svg";
 import iconDownArrow from "../../assets/icon-down-arrow.svg";
 
 const Signup = () => {
-  const StyledSignupForm = styled.form`
-    position: relative;
-    /* padding: 35px 35px 35px 35px; */
-  `;
+  const [role, setRole] = useState("BUYER");
 
-  const StyledSigunupIdWrapperDiv = styled.div`
-    display: flex;
-    margin: 10px 0px 42px 0px;
-    gap: 12px;
-  `;
-
-  const StyledSignupCommonInput = styled.input`
-    border: 1px solid #c4c4c4;
-    border-radius: 5px;
-    padding: 10px 0px 10px 5px;
-    width: 100%;
-  `;
-
-  const StyledCheckIdText = styled.p`
-    position: absolute;
-    top: 110px;
-    color: #21bf48;
-    font-size: 12px;
-  `;
-
-  const StyledCheckPwText = styled(StyledCheckIdText)`
-    top: 75px;
-    color: #eb5757;
-  `;
-
-  const StyledSignupIdInput = styled(StyledSignupCommonInput)`
-    width: 100%;
-  `;
-
-  const StyledSignupPwInput = styled(StyledSignupCommonInput)`
-    margin: 10px 0 12px 0;
-  `;
-
-  const StyledSignupPwCheckInput = styled(StyledSignupPwInput)`
-    margin-bottom: 42px;
-    border-color: #eb5757;
-  `;
-
-  const StyledSignupNameCheckInput = styled(StyledSignupCommonInput)`
-    margin: 10px 0 15px 0;
-  `;
-
-  const StyledSignupPHInput = styled(StyledSignupCommonInput)`
-    margin: 10px 0 15px 0;
-    flex-basis: content;
-    flex-grow: 1;
-  `;
-
-  const StyledSignupEmailInput = styled(StyledSignupCommonInput)`
-    margin: 10px 0 0 0;
-    /* width: 220px; */
-  `;
-
-  const StyledSignupCommonLabel = styled.label`
-    font-size: 14px;
-    font-weight: 400;
-    color: #767676;
-  `;
-
-  const StyledSignupIdCheckBtn = styled.button`
-    width: 31%;
-    padding: 0px 36px;
-    border-radius: 5px;
-    background-color: #21bf48;
-    color: #fefefe;
-  `;
-
-  const StyledSignupFiledset = styled.fieldset`
-    display: flex;
-    flex-direction: column;
-    padding: 35px;
-    border-left: 1px solid rgb(196, 196, 196);
-    border-right: 1px solid rgb(196, 196, 196);
-    border-bottom: 1px solid rgb(196, 196, 196);
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-  `;
-
-  const StyledSignupIdLabel = styled(StyledSignupCommonLabel)`
-    display: block;
-  `;
-
-  const StyledPwWrapperDiv = styled.div`
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  `;
-
-  const StyledCheckImg = styled.img`
-    position: absolute;
-    right: 0;
-    top: 57.5%;
-    bottom: 50%;
-    transform: translate(-50%, -50%);
-  `;
-
-  const StyledCheckImgOff = styled(StyledCheckImg)`
-    top: 41.5%;
-  `;
-
-  const StyledPHWrapperDiv = styled.div`
-    display: flex;
-    gap: 16.5px;
-  `;
-
-  const StyledEmailWrapperDiv = styled.div`
-    position: relative;
-    display: flex;
-    gap: 20px;
-  `;
-
-  const StyledEtcSpan = styled.span`
-    line-height: 51px;
-    color: #767676;
-  `;
-
-  const StyledArrowBtnForDiv = styled.div`
-    position: relative;
-    display: flex;
-  `;
-
-  const StyledArrowBtn = styled.button`
-    position: absolute;
-    top: 36%;
-    bottom: 50%;
-    transform: translate(-50%, -50%);
-    left: 130px;
-  `;
-
-  const StyledPHListUl = styled.ul`
-    position: absolute;
-    height: 150px;
-    overflow-y: scroll;
-    top: 57px;
-    width: 100%;
-    border: 1px solid #c4c4c4;
-    border-radius: 5px;
-    background-color: #ffffff;
-    z-index: 20;
-  `;
-
-  const StyledPHListLi = styled.li`
-    text-align: center;
-    padding: 10px;
-  `;
-
-  const StyledPHSelectBtn = styled.button`
-    width: 100%;
-  `;
+  const handleRoleChange = (newRole) => {
+    setRole(newRole);
+    console.log(role);
+  };
 
   return (
     <div>
@@ -175,7 +55,11 @@ const Signup = () => {
       </StyledLoginHeader>
 
       <StyledLoginWrapper>
-        <LoginOrSignupBtn singupOrLoginSeller="판매회원가입" singupOrLoginBuyer="구매회원가입" />
+        <LoginOrSignupBtn
+          onRoleChange={handleRoleChange}
+          singupOrLoginSeller="판매회원가입"
+          singupOrLoginBuyer="구매회원가입"
+        />
 
         <StyledSignupForm action="">
           <StyledSignupFiledset>
