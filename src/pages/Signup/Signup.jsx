@@ -1,15 +1,9 @@
-import { useState } from "react";
 import styled from "styled-components";
-import {
-  StyledLoginWrapper,
-  StyledLoginBtnWrapper,
-  StyledBuyerLoginBtn,
-  StyledSellerLoginBtn,
-  StyledLoginHeader,
-} from "../Login/LoginStyle";
+import { StyledLoginWrapper, StyledLoginHeader } from "../Login/LoginStyle";
 import { StyledHiddenLegend, StyledLogoImgLink } from "../../components/NavBar/NavBarStyle";
 import Logo from "../../components/Logo/Logo";
 import { Footer } from "../../components/Footer/Footer";
+import LoginOrSignupBtn from "../../components/LoginOrSignupBtn/LoginOrSignupBtn";
 
 import checkImgOn from "../../assets/icon-check-on.svg";
 import checkImgOff from "../../assets/icon-check-off.svg";
@@ -17,25 +11,9 @@ import iconUpArrow from "../../assets/icon-up-arrow.svg";
 import iconDownArrow from "../../assets/icon-down-arrow.svg";
 
 const Signup = () => {
-  const [buyerClicked, setBuyerClicked] = useState(true);
-  const [buyerOrSeller, setBuyerOrSeller] = useState("BUYER");
-  const [sellerClicked, setSellerClicked] = useState(false);
-
-  const handleBuyerClick = () => {
-    setBuyerClicked(true);
-    setSellerClicked(false);
-    setBuyerOrSeller("BUYER");
-  };
-
-  const handleSellerClick = () => {
-    setBuyerClicked(false);
-    setSellerClicked(true);
-    setBuyerOrSeller("SELLER");
-  };
-
   const StyledSignupForm = styled.form`
     position: relative;
-    padding: 35px 35px 35px 35px;
+    /* padding: 35px 35px 35px 35px; */
   `;
 
   const StyledSigunupIdWrapperDiv = styled.div`
@@ -108,6 +86,12 @@ const Signup = () => {
   const StyledSignupFiledset = styled.fieldset`
     display: flex;
     flex-direction: column;
+    padding: 35px;
+    border-left: 1px solid rgb(196, 196, 196);
+    border-right: 1px solid rgb(196, 196, 196);
+    border-bottom: 1px solid rgb(196, 196, 196);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
   `;
 
   const StyledSignupIdLabel = styled(StyledSignupCommonLabel)`
@@ -191,14 +175,7 @@ const Signup = () => {
       </StyledLoginHeader>
 
       <StyledLoginWrapper>
-        <StyledLoginBtnWrapper>
-          <StyledBuyerLoginBtn clicked={buyerClicked} onClick={handleBuyerClick}>
-            구매회원가입
-          </StyledBuyerLoginBtn>
-          <StyledSellerLoginBtn clicked={sellerClicked} onClick={handleSellerClick}>
-            판매회원가입
-          </StyledSellerLoginBtn>
-        </StyledLoginBtnWrapper>
+        <LoginOrSignupBtn singupOrLoginSeller="판매회원가입" singupOrLoginBuyer="구매회원가입" />
 
         <StyledSignupForm action="">
           <StyledSignupFiledset>
@@ -267,10 +244,10 @@ const Signup = () => {
               <StyledSignupEmailInput type="text" />
             </StyledEmailWrapperDiv>
           </StyledSignupFiledset>
+
+          <Footer />
         </StyledSignupForm>
       </StyledLoginWrapper>
-
-      <Footer />
     </div>
   );
 };
