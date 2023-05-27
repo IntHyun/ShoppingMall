@@ -1,37 +1,11 @@
-import styled from "styled-components";
 import { useState } from "react";
 import { StyledLoginWrapper, StyledLoginHeader } from "../Login/LoginStyle";
 import { StyledHiddenLegend, StyledLogoImgLink } from "../../components/NavBar/NavBarStyle";
 import Logo from "../../components/Logo/Logo";
 import { Footer } from "../../components/Footer/Footer";
 import LoginOrSignupBtn from "../../components/LoginOrSignupBtn/LoginOrSignupBtn";
-import {
-  StyledSignupForm,
-  StyledSigunupIdWrapperDiv,
-  StyledCheckIdText,
-  StyledCheckPwText,
-  StyledSignupIdInput,
-  StyledSignupPwInput,
-  StyledSignupPwCheckInput,
-  StyledSignupNameCheckInput,
-  StyledSignupPHInput,
-  StyledSignupEmailInput,
-  StyledSignupCommonLabel,
-  StyledSignupIdCheckBtn,
-  StyledSignupFiledset,
-  StyledSignupIdLabel,
-  StyledPwWrapperDiv,
-  StyledCheckImg,
-  StyledCheckImgOff,
-  StyledPHWrapperDiv,
-  StyledEmailWrapperDiv,
-  StyledEtcSpan,
-  StyledArrowBtnForDiv,
-  StyledArrowBtn,
-  StyledPHListUl,
-  StyledPHListLi,
-  StyledPHSelectBtn,
-} from "./SignupStyle";
+
+import * as S from "./SignupStyle";
 
 import checkImgOn from "../../assets/icon-check-on.svg";
 import checkImgOff from "../../assets/icon-check-off.svg";
@@ -39,6 +13,7 @@ import iconUpArrow from "../../assets/icon-up-arrow.svg";
 import iconDownArrow from "../../assets/icon-down-arrow.svg";
 
 const Signup = () => {
+  console.log(S);
   const [role, setRole] = useState("BUYER");
 
   const handleRoleChange = (newRole) => {
@@ -61,76 +36,76 @@ const Signup = () => {
           singupOrLoginBuyer="구매회원가입"
         />
 
-        <StyledSignupForm action="">
-          <StyledSignupFiledset>
+        <S.SignupForm action="">
+          <S.SignupFiledset>
             <StyledHiddenLegend>회원가입 페이지</StyledHiddenLegend>
 
-            <StyledSignupIdLabel>아이디</StyledSignupIdLabel>
-            <StyledSigunupIdWrapperDiv>
-              <StyledSignupIdInput type="text" />
-              <StyledSignupIdCheckBtn type="button">중복확인</StyledSignupIdCheckBtn>
-            </StyledSigunupIdWrapperDiv>
+            <S.SignupIdLabel>아이디</S.SignupIdLabel>
+            <S.SigunupIdWrapperDiv>
+              <S.SignupIdInput type="text" />
+              <S.SignupIdCheckBtn type="button">중복확인</S.SignupIdCheckBtn>
+            </S.SigunupIdWrapperDiv>
 
-            <StyledCheckIdText>멋진 아이디네요 !</StyledCheckIdText>
+            <S.CheckIdText>멋진 아이디네요 !</S.CheckIdText>
 
-            <StyledPwWrapperDiv>
-              <StyledSignupCommonLabel>비밀번호</StyledSignupCommonLabel>
-              <StyledCheckImg src={checkImgOff} />
-              <StyledSignupPwInput type="text" />
-            </StyledPwWrapperDiv>
+            <S.PwWrapperDiv>
+              <S.SignupCommonLabel>비밀번호</S.SignupCommonLabel>
+              <S.CheckImg src={checkImgOff} />
+              <S.SignupPwInput type="text" />
+            </S.PwWrapperDiv>
 
-            <StyledPwWrapperDiv>
-              <StyledSignupCommonLabel>비밀번호 재확인</StyledSignupCommonLabel>
-              <StyledCheckImgOff src={checkImgOn} />
-              <StyledSignupPwCheckInput type="text" />
-              <StyledCheckPwText>비밀번호가 일치하지 않습니다.</StyledCheckPwText>
-            </StyledPwWrapperDiv>
+            <S.PwWrapperDiv>
+              <S.SignupCommonLabel>비밀번호 재확인</S.SignupCommonLabel>
+              <S.CheckImgOff src={checkImgOn} />
+              <S.SignupPwCheckInput type="text" />
+              <S.CheckPwText>비밀번호가 일치하지 않습니다.</S.CheckPwText>
+            </S.PwWrapperDiv>
 
-            <StyledSignupCommonLabel>이름</StyledSignupCommonLabel>
-            <StyledSignupNameCheckInput type="text" />
+            <S.SignupCommonLabel>이름</S.SignupCommonLabel>
+            <S.SignupNameCheckInput type="text" />
 
-            <StyledSignupCommonLabel htmlFor="">휴대폰번호</StyledSignupCommonLabel>
+            <S.SignupCommonLabel htmlFor="">휴대폰번호</S.SignupCommonLabel>
 
-            <StyledPHWrapperDiv>
-              <StyledArrowBtnForDiv>
-                <StyledSignupPHInput type="text" />
-                <StyledArrowBtn type="button">
+            <S.PHWrapperDiv>
+              <S.ArrowBtnForDiv>
+                <S.SignupPHInput type="text" />
+                <S.ArrowBtn type="button">
                   <img src={iconDownArrow} alt="" />
-                </StyledArrowBtn>
-                <StyledPHListUl>
-                  <StyledPHListLi>
-                    <StyledPHSelectBtn type="button">010</StyledPHSelectBtn>
-                  </StyledPHListLi>
-                  <StyledPHListLi>
-                    <StyledPHSelectBtn type="button">011</StyledPHSelectBtn>
-                  </StyledPHListLi>
-                  <StyledPHListLi>
-                    <StyledPHSelectBtn type="button">016</StyledPHSelectBtn>
-                  </StyledPHListLi>
-                  <StyledPHListLi>
-                    <StyledPHSelectBtn type="button">017</StyledPHSelectBtn>
-                  </StyledPHListLi>
-                  <StyledPHListLi>
-                    <StyledPHSelectBtn type="button">018</StyledPHSelectBtn>
-                  </StyledPHListLi>
-                </StyledPHListUl>
-              </StyledArrowBtnForDiv>
+                </S.ArrowBtn>
+                <S.PHListUl>
+                  <S.PHListLi>
+                    <S.PHSelectBtn type="button">010</S.PHSelectBtn>
+                  </S.PHListLi>
+                  <S.PHListLi>
+                    <S.PHSelectBtn type="button">011</S.PHSelectBtn>
+                  </S.PHListLi>
+                  <S.PHListLi>
+                    <S.PHSelectBtn type="button">016</S.PHSelectBtn>
+                  </S.PHListLi>
+                  <S.PHListLi>
+                    <S.PHSelectBtn type="button">017</S.PHSelectBtn>
+                  </S.PHListLi>
+                  <S.PHListLi>
+                    <S.PHSelectBtn type="button">018</S.PHSelectBtn>
+                  </S.PHListLi>
+                </S.PHListUl>
+              </S.ArrowBtnForDiv>
 
-              <StyledSignupPHInput type="text" />
-              <StyledSignupPHInput type="text" />
-            </StyledPHWrapperDiv>
+              <S.SignupPHInput type="text" />
+              <S.SignupPHInput type="text" />
+            </S.PHWrapperDiv>
 
-            <StyledSignupCommonLabel htmlFor="">이메일</StyledSignupCommonLabel>
+            <S.SignupCommonLabel htmlFor="">이메일</S.SignupCommonLabel>
 
-            <StyledEmailWrapperDiv>
-              <StyledSignupEmailInput type="text" />
-              <StyledEtcSpan>@</StyledEtcSpan>
-              <StyledSignupEmailInput type="text" />
-            </StyledEmailWrapperDiv>
-          </StyledSignupFiledset>
+            <S.EmailWrapperDiv>
+              <S.SignupPHInput type="text" />
+              <S.EtcSpan>@</S.EtcSpan>
+              <S.SignupPHInput type="text" />
+            </S.EmailWrapperDiv>
+          </S.SignupFiledset>
 
           <Footer />
-        </StyledSignupForm>
+        </S.SignupForm>
       </StyledLoginWrapper>
     </div>
   );

@@ -1,70 +1,70 @@
 import styled from "styled-components";
 
-export const StyledSignupForm = styled.form`
+export const SignupForm = styled.form`
   position: relative;
   /* padding: 35px 35px 35px 35px; */
 `;
 
-export const StyledSigunupIdWrapperDiv = styled.div`
+export const SigunupIdWrapperDiv = styled.div`
   display: flex;
   margin: 10px 0px 42px 0px;
   gap: 12px;
 `;
 
-export const StyledSignupCommonInput = styled.input`
+export const SignupCommonInput = styled.input`
   border: 1px solid #c4c4c4;
   border-radius: 5px;
   padding: 10px 0px 10px 5px;
   width: 100%;
 `;
 
-export const StyledCheckIdText = styled.p`
+export const CheckIdText = styled.p`
   position: absolute;
   top: 110px;
   color: #21bf48;
   font-size: 12px;
 `;
 
-export const StyledCheckPwText = styled(StyledCheckIdText)`
+export const CheckPwText = styled(CheckIdText)`
   top: 75px;
   color: #eb5757;
 `;
 
-export const StyledSignupIdInput = styled(StyledSignupCommonInput)`
+export const SignupIdInput = styled(SignupCommonInput)`
   width: 100%;
 `;
 
-export const StyledSignupPwInput = styled(StyledSignupCommonInput)`
+export const SignupPwInput = styled(SignupCommonInput)`
   margin: 10px 0 12px 0;
 `;
 
-export const StyledSignupPwCheckInput = styled(StyledSignupPwInput)`
+export const SignupPwCheckInput = styled(SignupPwInput)`
   margin-bottom: 42px;
   border-color: #eb5757;
 `;
 
-export const StyledSignupNameCheckInput = styled(StyledSignupCommonInput)`
+export const SignupNameCheckInput = styled(SignupCommonInput)`
   margin: 10px 0 15px 0;
 `;
 
-export const StyledSignupPHInput = styled(StyledSignupCommonInput)`
+export const SignupPHInput = styled(SignupCommonInput)`
   margin: 10px 0 15px 0;
   flex-basis: content;
   flex-grow: 1;
 `;
 
-export const StyledSignupEmailInput = styled(StyledSignupCommonInput)`
+export const SignupEmailInput = styled(SignupCommonInput)`
   margin: 10px 0 0 0;
   /* width: 220px; */
 `;
 
-export const StyledSignupCommonLabel = styled.label`
+export const SignupCommonLabel = styled.label`
   font-size: 14px;
   font-weight: 400;
   color: #767676;
 `;
 
-export const StyledSignupIdCheckBtn = styled.button`
+export const SignupIdCheckBtn = styled.button`
   width: 31%;
   padding: 0px 36px;
   border-radius: 5px;
@@ -72,7 +72,7 @@ export const StyledSignupIdCheckBtn = styled.button`
   color: #fefefe;
 `;
 
-export const StyledSignupFiledset = styled.fieldset`
+export const SignupFiledset = styled.fieldset`
   display: flex;
   flex-direction: column;
   padding: 35px;
@@ -83,17 +83,17 @@ export const StyledSignupFiledset = styled.fieldset`
   border-bottom-left-radius: 10px;
 `;
 
-export const StyledSignupIdLabel = styled(StyledSignupCommonLabel)`
+export const SignupIdLabel = styled(SignupCommonLabel)`
   display: block;
 `;
 
-export const StyledPwWrapperDiv = styled.div`
+export const PwWrapperDiv = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
 `;
 
-export const StyledCheckImg = styled.img`
+export const CheckImg = styled.img`
   position: absolute;
   right: 0;
   top: 57.5%;
@@ -101,32 +101,32 @@ export const StyledCheckImg = styled.img`
   transform: translate(-50%, -50%);
 `;
 
-export const StyledCheckImgOff = styled(StyledCheckImg)`
+export const CheckImgOff = styled(CheckImg)`
   top: 41.5%;
 `;
 
-export const StyledPHWrapperDiv = styled.div`
+export const PHWrapperDiv = styled.div`
   display: flex;
   gap: 16.5px;
 `;
 
-export const StyledEmailWrapperDiv = styled.div`
+export const EmailWrapperDiv = styled.div`
   position: relative;
   display: flex;
   gap: 20px;
 `;
 
-export const StyledEtcSpan = styled.span`
+export const EtcSpan = styled.span`
   line-height: 51px;
   color: #767676;
 `;
 
-export const StyledArrowBtnForDiv = styled.div`
+export const ArrowBtnForDiv = styled.div`
   position: relative;
   display: flex;
 `;
 
-export const StyledArrowBtn = styled.button`
+export const ArrowBtn = styled.button`
   position: absolute;
   top: 36%;
   bottom: 50%;
@@ -134,7 +134,7 @@ export const StyledArrowBtn = styled.button`
   left: 130px;
 `;
 
-export const StyledPHListUl = styled.ul`
+export const PHListUl = styled.ul`
   position: absolute;
   height: 150px;
   overflow-y: scroll;
@@ -146,11 +146,11 @@ export const StyledPHListUl = styled.ul`
   z-index: 20;
 `;
 
-export const StyledPHListLi = styled.li`
+export const PHListLi = styled.li`
   text-align: center;
   padding: 10px;
 `;
 
-export const StyledPHSelectBtn = styled.button`
+export const PHSelectBtn = styled.button`
   width: 100%;
 `;
